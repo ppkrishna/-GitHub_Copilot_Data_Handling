@@ -1,0 +1,59 @@
+## 🔹 How GitHub Copilot Handles Data
+
+** 1. **Data Handling for Code Suggestions **
+When you use GitHub Copilot in a code editor (like VS Code):
+
+- The **prompts** you provide (such as code, comments, or questions) are **not stored permanently**.
+- Copilot uses the prompt to generate a suggestion and then **discards it**.
+- If you're an **Individual Subscriber**, you can choose to **opt out** of sharing your prompts with GitHub for model improvement.
+
+📌 **Example**:  
+You write:
+```python
+def add(a, b):
+    return a + b
+```
+Copilot suggests adding a logging line. Once the suggestion is shown, your code is **not saved** on GitHub’s servers.
+
+
+### 2. **Data Handling for Copilot Chat**
+Copilot Chat is an interactive tool where you can ask coding-related questions.
+
+#### Key Features:
+- **Formatting**: Responses are well-formatted with highlighted code for better readability.
+- **User Engagement**: You can ask follow-up questions, request clarifications, or provide more context.
+- **Data Retention**: Prompts and responses in Copilot Chat (outside the code editor) are **retained for 28 days**. Retention policies may vary for chat used inside the code editor.
+
+📌 **Example**:  
+You ask:  
+> "How do I write a quick sort in Python?"  
+Copilot gives you the code. You follow up with:  
+> "What’s the time complexity?"  
+This conversation may be stored for up to 28 days.
+
+---
+
+### 3. **Types of Prompts Supported by Copilot Chat**
+
+#### ✅ Common Prompt Types:
+- **Direct Questions**:  
+  > "How does useEffect work in React?"
+
+- **Code Requests**:  
+  > "Write a function to calculate factorial."
+
+- **Open-Ended Queries**:  
+  > "How can I improve performance in Python?"
+
+- **Contextual Prompts**:  
+  > "Here’s my code — can you suggest improvements?"
+
+
+### 4. **Limited Context Windows**
+Copilot can only process a limited amount of code or text at once — this is called the **context window**.
+
+- Copilot Chat supports up to **4,000 tokens** (roughly 200–500 lines of code).
+- For large codebases, it's better to **break down your queries** into smaller parts.
+
+📌 **Example**:  
+If you paste an entire Django project, Copilot may not understand everything. But if you share just `views.py` and ask, "Is the login logic correct?" — the response will be more accurate.
